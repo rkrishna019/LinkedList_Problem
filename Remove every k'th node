@@ -1,0 +1,22 @@
+class GfG
+{
+    /*You are required to complete this method*/
+    Node delete(Node head, int k)
+    {
+      
+        if( head == null || k == 1) return null;
+        Node curr = head;
+        int i = 1;
+        
+        while(curr != null){
+            if(i==k-1 && curr.next != null){
+                
+                curr.next = curr.next.next;
+                i=0;
+            }
+            i++;
+            curr = curr.next;
+        }
+        return head;
+    }
+}
